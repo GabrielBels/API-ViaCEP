@@ -76,7 +76,7 @@ $(document).ready(() => {
     });
     
     $('#estado').keyup(function () {
-        $(this).val(this.value.replace(/\w[A-Za-z]2/g, '')) // Estado apenas com letras
+        $(this).val(this.value.replace(/[A-Za-z]/g, '')) // Estado apenas com letras
     });
 
     $('#cep').keyup(function () {
