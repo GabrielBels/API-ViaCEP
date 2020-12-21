@@ -74,6 +74,10 @@ $(document).ready(() => {
     $('#numero').keyup(function () {
         $(this).val(this.value.replace(/\D/g, '')) // Só permite numéricos no numero da casa
     });
+    
+    $('#estado').keyup(function () {
+        $(this).val(this.value.replace(/\w[A-Za-z]2/g, '')) // Estado apenas com letras
+    });
 
     $('#cep').keyup(function () {
         $(this).val(this.value.replace(/\D/g, '')) // Só permitir numéricos no CEP
