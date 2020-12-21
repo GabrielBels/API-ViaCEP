@@ -70,16 +70,30 @@ $(document).ready(() => {
             $("#cep").focus();
         }
     });
+    
+    $('#cep').keyup(function () {
+        $(this).val(this.value.replace(/\D/g, '')) // Só permitir numéricos no CEP
+    });
 
     $('#numero').keyup(function () {
         $(this).val(this.value.replace(/\D/g, '')) // Só permite numéricos no numero da casa
+    });
+    
+    $('#logradouro').keyup(function () {
+        $(this).val(this.value.replace(/\d/g, '')) // Logradouro apenas com letras
+    });
+    
+    $('#cidade').keyup(function () {
+        $(this).val(this.value.replace(/\d/g, '')) // Cidade apenas com letras
+    });
+    
+    $('#bairro').keyup(function () {
+        $(this).val(this.value.replace(/\d/g, '')) // Cidade apenas com letras
     });
     
     $('#estado').keyup(function () {
         $(this).val(this.value.replace(/\d/g, '')) // Estado apenas com letras
     });
 
-    $('#cep').keyup(function () {
-        $(this).val(this.value.replace(/\D/g, '')) // Só permitir numéricos no CEP
-    });
+    
 });
