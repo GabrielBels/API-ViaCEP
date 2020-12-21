@@ -1,0 +1,98 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#titulo{
+    grid-area: titulo;
+    margin-left: 40px;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 100px 300px;
+    grid-template-rows: 1vh 1vh 6vh 6vh 6vh 6vh 6vh 6vh ;
+    grid-template-areas:
+    "null alert"
+    "titulo titulo"
+    "fcep cep"
+    "flogradouro logradouro"
+    "fnumero numero"
+    "fcomplemento complemento"
+    "fbairro bairro"
+    "fcidade cidade"
+    "festado estado";
+}
+
+input{
+    height: 25px;
+    margin-left: 10px;
+}
+
+label{
+    margin-top: 5px;
+    text-align: right;
+}
+
+[for=cep] {
+    grid-area: fcep;
+}
+
+[for=logradouro] {
+    grid-area: flogradouro;
+}
+
+[for=numero] {
+    grid-area: fnumero;
+}
+
+[for=complemento] {
+    grid-area: fcomplemento;
+}
+
+[for=bairro] {
+    grid-area: fbairro;
+}
+
+[for=cidade] {
+    grid-area: fcidade;
+}
+
+[for=estado] {
+    grid-area: festado;
+}
+
+#alert{
+    grid-area: alert;
+    margin-left: 130px;
+    font-size: 13px;
+    color: red;
+    font-weight: bold;
+}
+
+#cep{
+    grid-area: cep;
+}
+
+#logradouro{
+    grid-area: logradouro;
+}
+
+#numero{
+    grid-area: numero;
+}
+
+#complemento{
+    grid-area: complemento;
+}
+
+#bairro{
+    grid-area: bairro;
+}
+
+#cidade{
+    grid-area: cidade;
+}
+
+#estado{
+    grid-area: estado;
+}
