@@ -40,6 +40,11 @@ $(document).ready(() => {
                         // caso de erro exibirá uma msg acima do input de cep
                         $("#alert").html("");
                         $("#alert").append("<p>Não foi possível localizar o CEP.</p>")    
+                        
+                        $("#logradouro").removeAttr("readonly")
+                        $("#bairro").removeAttr("readonly")
+                        $("#cidade").removeAttr("readonly")
+                        $("#estado").removeAttr("readonly")
 
                         // limpa todos os campos que podem ter valores anteriores
                         $("#logradouro").val("");
